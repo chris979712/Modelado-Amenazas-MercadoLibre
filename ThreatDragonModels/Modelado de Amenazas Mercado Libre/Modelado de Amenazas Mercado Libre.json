@@ -11,16 +11,36 @@
     "diagrams": [
       {
         "id": 0,
-        "title": "CU Inicio de sesión",
+        "title": "Inicio de sesión",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.5.0",
         "cells": [],
-        "description": "CU Inicio de sesión"
+        "description": "Inicio de sesión"
+      },
+      {
+        "id": 1,
+        "title": "Crear cuenta",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Crear cuenta"
+      },
+      {
+        "id": 2,
+        "title": "Realizar pedido",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Realizar pedido"
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 3,
     "reviewer": "Guillermo Humberto Vera Amaro",
     "threatTop": 0
   }
