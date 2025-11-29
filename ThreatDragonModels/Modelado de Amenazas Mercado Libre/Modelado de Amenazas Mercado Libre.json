@@ -505,6 +505,116 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "62964ebd-ea53-438f-ba17-169adcd03c14",
+            "source": {
+              "cell": "28111cfa-6d55-4d44-bd3a-2b10451ba3f4",
+              "port": "c9e13bae-83c8-4069-a8e9-c5e8e3c19d80"
+            },
+            "target": {
+              "cell": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
+              "port": "6c6b6d3c-d21b-4155-a5a5-a77c4e2974f3"
+            },
+            "vertices": [
+              {
+                "x": 1740,
+                "y": 460
+              },
+              {
+                "x": 1920,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "7b560ffa-4d9e-4245-a77c-b6297940d83c",
+            "source": {
+              "x": 1980,
+              "y": 550
+            },
+            "target": {
+              "cell": "28111cfa-6d55-4d44-bd3a-2b10451ba3f4",
+              "port": "c9e13bae-83c8-4069-a8e9-c5e8e3c19d80"
+            },
+            "vertices": [
+              {
+                "x": 1920,
+                "y": 660
+              },
+              {
+                "x": 1740,
+                "y": 660
+              }
+            ]
+          },
+          {
             "position": {
               "x": 640,
               "y": 480
@@ -866,14 +976,17 @@
           },
           {
             "position": {
-              "x": 1994,
-              "y": 515
+              "x": 1980,
+              "y": 465
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 130,
+              "height": 170
             },
             "attrs": {
+              "text": {
+                "text": "Proceso de login"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -968,8 +1081,8 @@
             "zIndex": 14,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
-              "description": "",
+              "name": "Proceso de login",
+              "description": "Proceso que se encarga del login para iniciar sesión en la aplicación.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -979,6 +1092,137 @@
               "isWebApplication": false,
               "privilegeLevel": "",
               "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 2436,
+              "y": 520
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Base de datos"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "704023f4-bddd-4c6a-9183-351e0d134bb1"
+                },
+                {
+                  "group": "right",
+                  "id": "f7f2ace9-775f-4b9d-8135-7f9501ff4503"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4cdf31e9-6cf3-4185-bc14-b54bcd188b79"
+                },
+                {
+                  "group": "left",
+                  "id": "9940ccbb-b732-4aa0-9c21-636e7fa61ec4"
+                }
+              ]
+            },
+            "id": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Store",
+              "name": "Base de datos",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           }
         ],
