@@ -125,18 +125,61 @@
             "data": {
               "type": "tm.Actor",
               "name": "Usuario",
-              "description": "",
+              "description": "Usuario que accede al sistema Mercado Libre, el cual puede ser un Administrador o usuario Cliente",
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Usuario web /\n limite del servidor\n",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
             },
+            "labels": [
+              "Usuario web /\n limite del servidor\n"
+            ],
+            "id": "5f690f47-ebb9-48d6-95cf-d66a65245980",
+            "source": {
+              "x": 270,
+              "y": 680
+            },
+            "target": {
+              "x": 270,
+              "y": 470
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 680
+              },
+              {
+                "x": 330,
+                "y": 620
+              },
+              {
+                "x": 330,
+                "y": 490
+              }
+            ],
             "tools": {
               "items": [
                 "boundary",
-                "button-remove"
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
               ],
               "name": null
             }
