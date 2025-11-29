@@ -615,6 +615,156 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
+            "source": {
+              "x": 2110,
+              "y": 550
+            },
+            "target": {
+              "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
+              "port": "9940ccbb-b732-4aa0-9c21-636e7fa61ec4"
+            },
+            "vertices": [
+              {
+                "x": 2160,
+                "y": 460
+              },
+              {
+                "x": 2350,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "5882da60-1507-4269-9c9a-ac9e89941201",
+            "source": {
+              "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
+              "port": "9940ccbb-b732-4aa0-9c21-636e7fa61ec4"
+            },
+            "target": {
+              "cell": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
+              "port": "c9e13bae-83c8-4069-a8e9-c5e8e3c19d80"
+            },
+            "vertices": [
+              {
+                "x": 2360,
+                "y": 640
+              },
+              {
+                "x": 2160,
+                "y": 640
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Limite servidor web /\nbase de datos",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Limite servidor web /\nbase de datos"
+            ],
+            "id": "543d3308-01ca-40b7-95ac-95ef103a1f3b",
+            "source": {
+              "x": 2450,
+              "y": 460
+            },
+            "target": {
+              "x": 2470,
+              "y": 650
+            },
+            "vertices": [
+              {
+                "x": 2430,
+                "y": 460
+              },
+              {
+                "x": 2360,
+                "y": 490
+              },
+              {
+                "x": 2360,
+                "y": 620
+              }
+            ]
+          },
+          {
             "position": {
               "x": 640,
               "y": 480
@@ -1205,7 +1355,7 @@
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
-              "description": "",
+              "description": "Base de datos que contiene las tablas e información usadas dentro del sitio web.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1216,13 +1366,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ],
