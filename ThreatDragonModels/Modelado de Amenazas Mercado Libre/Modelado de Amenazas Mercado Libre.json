@@ -1,0 +1,16 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Modelado de Amenazas Mercado Libre",
+    "owner": "Christopher Vasquez Zapata, Juan Pablo Torres Ortiz, Oscar Hizay Apodaca García",
+    "description": "Modelado de amenazas del proyecto desarrollado en la EE Progamación Segura, detallando las posibles vulnerabilidades y mitigaciones en los CU Iniciar Sesión, Crear Cuenta, Hacer Pedido",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Guillermo Humberto Vera Amaro",
+    "threatTop": 0
+  }
+}
