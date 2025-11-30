@@ -2601,7 +2601,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQL Query Insert",
+              "name": "SQL Insert Cuenta",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2633,7 +2633,7 @@
               }
             },
             "labels": [
-              "SQL Query Insert"
+              "SQL Insert Cuenta"
             ],
             "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
             "source": {
@@ -2647,6 +2647,10 @@
             "vertices": [
               {
                 "x": 2160,
+                "y": 460
+              },
+              {
+                "x": 2220,
                 "y": 460
               },
               {
