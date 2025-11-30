@@ -212,7 +212,7 @@
                   "status": "Open",
                   "severity": "High",
                   "type": "Information disclosure",
-                  "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas\n.",
+                  "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas.",
                   "mitigation": "Implementar el protocolo de comunicación HTTPS para manetener cifradas y seguras las solicitudes emitidas al servidor web.",
                   "modelType": "STRIDE",
                   "new": false,
@@ -222,7 +222,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 2,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -296,7 +296,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -358,18 +358,23 @@
               "threats": [
                 {
                   "id": "215ea7d9-128a-4dc5-9f36-b8049a9f16fd",
-                  "title": "New STRIDE threat",
+                  "title": "Solicitudes en formato HTTP",
                   "status": "Open",
-                  "severity": "TBD",
+                  "severity": "High",
                   "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "description": "Las solicitudes al frontend se transmiten en protocolo HTTP, lo que permite que puedan ser interceptadas y modificadas entre el tránsito.",
+                  "mitigation": "Implementar el protocolo HTTPS en las solicitudes transmitidas del servidor web al frontend, a través del proxy inverso, permitiendo que no puedan ser modificadas o interceptadas.",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 4,
-                  "score": ""
+                  "score": "8"
                 }
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Request"
@@ -396,23 +401,14 @@
                 "x": 1030,
                 "y": 470
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -428,20 +424,39 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Response",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d9fb7e11-f133-4895-9c6a-b8671a88c012",
+                  "title": "Respuestas del frontend en formato HTTP",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
+                  "mitigation": "Implementar el protocolo de comunicación HTTPS para prevenir que sea interceptadas y modificadas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Data Flow"
+              "Response"
             ],
             "id": "dede78e2-cf30-45fa-b35e-a1dae1aa3f9e",
             "source": {
@@ -458,6 +473,10 @@
                 "y": 650
               },
               {
+                "x": 960,
+                "y": 670
+              },
+              {
                 "x": 830,
                 "y": 650
               }
@@ -467,7 +486,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -483,20 +503,39 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ae7ff183-6f81-424a-9d3b-0673546758aa",
+                  "title": "Comunicación en formato HTTP ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas.",
+                  "mitigation": "Implementar la comunicación HTTPS para la comunicación entre el front end y el servidor web que contiene la API Rest.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Data Flow"
+              "Request"
             ],
             "id": "b9b077de-3f5c-4c5f-9292-f6639cab71cb",
             "source": {
@@ -522,7 +561,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -538,20 +578,39 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Response\n",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ec017c00-eae6-4523-8702-d3bcf8ed4a8d",
+                  "title": "Respuestas en formato HTTP",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
+                  "mitigation": "Cifrar los canales de comunicación e implementar el protocolo HTTPS en la conexión entre cliente y servidor.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Data Flow"
+              "Response\n"
             ],
             "id": "793eb38f-8599-4841-bed8-a266e7d287ad",
             "source": {
@@ -983,7 +1042,7 @@
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 1,
+                "denialOfService": 2,
                 "elevationOfPrivilege": 1
               }
             }
@@ -1002,8 +1061,8 @@
                 "text": "Frontend"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1100,12 +1159,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "fc1e16be-4377-41ea-9336-ee85ae7b4b8b",
+                  "title": "Ataque XSS",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Repudiation",
+                  "description": "Un atacante inserta entradas maliciosas con el fin de realizar un ataque XSS el cual pueda ser persistente o no, así como modificar la página.",
+                  "mitigation": "Validar y sanitizar las entradas recibidas por el usuario.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1122,8 +1203,8 @@
                 "text": "Servidor web Apache"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1220,12 +1301,26 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "ffa0508e-062d-4445-8d37-f4379518f737",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 12,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -4202,6 +4297,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 6
+    "threatTop": 12
   }
 }
