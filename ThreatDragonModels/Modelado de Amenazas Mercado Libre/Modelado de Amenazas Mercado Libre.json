@@ -652,7 +652,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Request LogIn",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -665,7 +665,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "Request LogIn"
             ],
             "id": "62964ebd-ea53-438f-ba17-169adcd03c14",
             "source": {
@@ -707,7 +707,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Response LogIn",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -720,7 +720,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "Response LogIn"
             ],
             "id": "7b560ffa-4d9e-4245-a77c-b6297940d83c",
             "source": {
@@ -779,8 +779,8 @@
             ],
             "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
             "source": {
-              "x": 2110,
-              "y": 550
+              "x": 1810,
+              "y": 750
             },
             "target": {
               "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
@@ -843,12 +843,12 @@
             },
             "vertices": [
               {
-                "x": 2360,
-                "y": 640
+                "x": 2060,
+                "y": 840
               },
               {
-                "x": 2160,
-                "y": 640
+                "x": 1860,
+                "y": 840
               }
             ]
           },
@@ -1309,18 +1309,26 @@
               "threats": [
                 {
                   "id": "ffa0508e-062d-4445-8d37-f4379518f737",
-                  "title": "New STRIDE threat",
+                  "title": "Denegación de servicios",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Spoofing",
+                  "severity": "High",
+                  "type": "Denial of service",
                   "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "Se aplica un balanceador de carga para poder rechazar aquellas peticiones en volumen.\nSe tiene en cuenta la posibilidad de contratar un host de servicios como CloudFlare, el cual se encargue de realizar balanceos de carga y prevenir este tipo de situaciones.",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 12,
-                  "score": ""
+                  "score": "8"
                 }
-              ]
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 2,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1435,18 +1443,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "43662d1b-733f-4157-946a-7197d91641bf",
+                  "title": "Inyección SQL",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "El usuario logra mandar una solicitud con datos maliciosos que son usados para realizar una Inyección SQL.",
+                  "mitigation": "Validar los datos recibidos desde el front end, haciendo que se apeguen a un formato válido o expresión regular.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 3,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
             "position": {
-              "x": 2436,
-              "y": 520
+              "x": 2140,
+              "y": 720
             },
             "size": {
               "width": 120,
@@ -1558,13 +1588,27 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8b974b1f-63ea-42eb-81f4-717490639bfe",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 14,
+                  "score": ""
+                }
+              ]
             }
           }
         ],
@@ -4297,6 +4341,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 12
+    "threatTop": 17
   }
 }
