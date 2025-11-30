@@ -3411,7 +3411,7 @@
         "description": "Crear cuenta"
       },
       {
-        "id": 8,
+        "id": 9,
         "title": "Hacer pedido",
         "diagramType": "STRIDE",
         "placeholder": "New STRIDE diagram description",
@@ -3432,8 +3432,8 @@
                 "text": "Usuario"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -3530,25 +3530,11 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": [
-                {
-                  "id": "ecebea98-3308-417d-b2c4-6fdeb24b7367",
-                  "title": "Inicio por fuerza bruta",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Spoofing",
-                  "description": "Un usuario intenta usar ataques de fuerza bruta como diccionarios o tablas de arcoiris con diferentes datos, con el fin de poder ingresar al sistema.",
-                  "mitigation": "Limitar el número de intentos de inicio de sesión en caso de contraseñas incorrectas.\nLogear la IP de origen de inicio de sesión en caso de múltiples inicios de sesión fallidos.\nImplementar autenticación multifactor\n",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 18,
-                  "score": "8"
-                }
-              ],
+              "threats": [],
               "threatFrequency": {
-                "spoofing": 1,
+                "spoofing": 0,
                 "repudiation": 0
               }
             }
@@ -4069,7 +4055,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request LogIn",
+              "name": "Request Crear cuenta",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4079,10 +4065,29 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "0b6368da-0167-4452-b280-7c36d5b71ce2",
+                  "title": "Solicitudes sin cifrar",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Las solicitudes realizadas del front end al servidor del API se encuentran con el protocolo HTTP, lo que permite que puedan ser interceptadas y manipuladas para atacar el servidor del backend.",
+                  "mitigation": "Implementar el protocolo HTTPS en la comunicación entre un cliente y el backend\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Request LogIn"
+              "Request Crear cuenta"
             ],
             "id": "62964ebd-ea53-438f-ba17-169adcd03c14",
             "source": {
@@ -4124,7 +4129,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Response LogIn",
+              "name": "Response Crear cuenta",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4134,10 +4139,29 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d0687d99-576a-4032-afd8-59d4bb315922",
+                  "title": "Comunicación HTTP",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Las respuestas obtenidas por el servidor del backend se encuentran sin cifrar, las cuales pueden ser manipuladas e interceptadas por un atacante.",
+                  "mitigation": "Implementar el protocolo HTTPS en la comunicación entre el cliente y el backend.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Response LogIn"
+              "Response Crear cuenta"
             ],
             "id": "7b560ffa-4d9e-4245-a77c-b6297940d83c",
             "source": {
@@ -4293,7 +4317,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQL Query request",
+              "name": "SQL Insert Cuenta",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4325,7 +4349,7 @@
               }
             },
             "labels": [
-              "SQL Query request"
+              "SQL Insert Cuenta"
             ],
             "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
             "source": {
@@ -4342,8 +4366,16 @@
                 "y": 460
               },
               {
-                "x": 2350,
-                "y": 460
+                "x": 2260,
+                "y": 440
+              },
+              {
+                "x": 2280,
+                "y": 440
+              },
+              {
+                "x": 2380,
+                "y": 470
               }
             ]
           },
@@ -4810,7 +4842,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Proceso de login"
+                "text": "Proceso de\ncreación de\ncuenta"
               },
               "body": {
                 "stroke": "#333333",
@@ -4906,8 +4938,8 @@
             "id": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
             "data": {
               "type": "tm.Process",
-              "name": "Proceso de login",
-              "description": "Proceso que se encarga del login para iniciar sesión en la aplicación.",
+              "name": "Proceso de\ncreación de\ncuenta",
+              "description": "Proceso que se encarga de la creación de cuentas de usuario para inicio de sesión.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -5102,7 +5134,7 @@
         "description": "Hacer pedido"
       }
     ],
-    "diagramTop": 9,
+    "diagramTop": 10,
     "reviewer": "Guillermo Humberto Vera Amaro",
     "threatTop": 23
   }
