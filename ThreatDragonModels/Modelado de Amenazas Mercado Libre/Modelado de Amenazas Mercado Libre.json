@@ -1528,29 +1528,23 @@
                   "new": false,
                   "number": 13,
                   "score": "5"
-                },
-                {
-                  "id": "74984165-5b56-4530-ac0c-9d30cfad6653",
-                  "title": "Mal uso de endpoints",
-                  "status": "Mitigated",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Un usuario es capaz de utilizar funciones de administrador,  así como de usuario normal o viceversa.",
-                  "mitigation": "Implementar medidas de autenticación y autorización, mediante tokens JWT.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 15,
-                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 2,
+                "tampering": 1,
                 "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
