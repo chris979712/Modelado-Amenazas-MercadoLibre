@@ -4317,7 +4317,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQL Insert Cuenta",
+              "name": "SQL Insert pedido\nSQL Update carrito",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4349,7 +4349,7 @@
               }
             },
             "labels": [
-              "SQL Insert Cuenta"
+              "SQL Insert pedido\nSQL Update carrito"
             ],
             "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
             "source": {
@@ -4842,7 +4842,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Proceso de\ncreación de\ncuenta"
+                "text": "Proceso de\npedido"
               },
               "body": {
                 "stroke": "#333333",
@@ -4938,7 +4938,7 @@
             "id": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
             "data": {
               "type": "tm.Process",
-              "name": "Proceso de\ncreación de\ncuenta",
+              "name": "Proceso de\npedido",
               "description": "Proceso que se encarga de la creación de cuentas de usuario para inicio de sesión.",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -4984,6 +4984,13 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
