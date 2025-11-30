@@ -178,8 +178,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -200,7 +199,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -209,7 +208,7 @@
                 {
                   "id": "d905f38e-8f41-43a7-88c3-cebbb8eed22c",
                   "title": "Solicitudes al servidor en formato HTTP",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas.",
@@ -222,7 +221,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 3,
+                "informationDisclosure": 4,
                 "denialOfService": 0
               }
             },
@@ -253,8 +252,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -275,7 +273,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -284,19 +282,19 @@
                 {
                   "id": "66126225-808e-44cf-8be5-86b6e4973dce",
                   "title": "Alteración en respuestas del servidor",
-                  "status": "Open",
-                  "severity": "TBD",
+                  "status": "Mitigated",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
                   "mitigation": "Cifrar los canales de comunicación e implementar el protocolo HTTPS en la conexión entre cliente y servidor.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 3,
-                  "score": ""
+                  "score": "5"
                 }
               ],
               "threatFrequency": {
-                "tampering": 4,
+                "tampering": 5,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -328,8 +326,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -350,7 +347,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -359,7 +356,7 @@
                 {
                   "id": "215ea7d9-128a-4dc5-9f36-b8049a9f16fd",
                   "title": "Solicitudes en formato HTTP",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Tampering",
                   "description": "Las solicitudes al frontend se transmiten en protocolo HTTP, lo que permite que puedan ser interceptadas y modificadas entre el tránsito.",
@@ -371,7 +368,7 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0
               }
@@ -394,6 +391,10 @@
                 "y": 470
               },
               {
+                "x": 930,
+                "y": 450
+              },
+              {
                 "x": 940,
                 "y": 450
               },
@@ -407,8 +408,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -429,7 +429,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -438,7 +438,7 @@
                 {
                   "id": "d9fb7e11-f133-4895-9c6a-b8671a88c012",
                   "title": "Respuestas del frontend en formato HTTP",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "High",
                   "type": "Information disclosure",
                   "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
@@ -451,7 +451,7 @@
               ],
               "threatFrequency": {
                 "tampering": 0,
-                "informationDisclosure": 1,
+                "informationDisclosure": 2,
                 "denialOfService": 0
               }
             },
@@ -486,8 +486,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -508,7 +507,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -517,20 +516,20 @@
                 {
                   "id": "ae7ff183-6f81-424a-9d3b-0673546758aa",
                   "title": "Comunicación en formato HTTP ",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
                   "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas.",
                   "mitigation": "Implementar la comunicación HTTPS para la comunicación entre el front end y el servidor web que contiene la API Rest.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 9,
-                  "score": ""
+                  "score": "8"
                 }
               ],
               "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
+                "tampering": 1,
+                "informationDisclosure": 3,
                 "denialOfService": 0
               }
             },
@@ -561,8 +560,7 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
                 "targetMarker": {
                   "name": "block"
                 },
@@ -583,7 +581,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
@@ -592,9 +590,9 @@
                 {
                   "id": "ec017c00-eae6-4523-8702-d3bcf8ed4a8d",
                   "title": "Respuestas en formato HTTP",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
-                  "type": "Tampering",
+                  "type": "Information disclosure",
                   "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
                   "mitigation": "Cifrar los canales de comunicación e implementar el protocolo HTTPS en la conexión entre cliente y servidor.",
                   "modelType": "STRIDE",
@@ -604,8 +602,8 @@
                 }
               ],
               "threatFrequency": {
-                "tampering": 2,
-                "informationDisclosure": 0,
+                "tampering": 3,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -777,61 +775,6 @@
             "labels": [
               "Data Flow"
             ],
-            "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
-            "source": {
-              "x": 1810,
-              "y": 750
-            },
-            "target": {
-              "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
-              "port": "9940ccbb-b732-4aa0-9c21-636e7fa61ec4"
-            },
-            "vertices": [
-              {
-                "x": 2160,
-                "y": 460
-              },
-              {
-                "x": 2350,
-                "y": 460
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
             "id": "5882da60-1507-4269-9c9a-ac9e89941201",
             "source": {
               "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
@@ -843,12 +786,12 @@
             },
             "vertices": [
               {
-                "x": 2060,
-                "y": 840
+                "x": 2400,
+                "y": 640
               },
               {
-                "x": 1860,
-                "y": 840
+                "x": 2200,
+                "y": 640
               }
             ]
           },
@@ -889,6 +832,61 @@
               {
                 "x": 2360,
                 "y": 620
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
+            "source": {
+              "cell": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
+              "port": "c9e13bae-83c8-4069-a8e9-c5e8e3c19d80"
+            },
+            "target": {
+              "cell": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
+              "port": "9940ccbb-b732-4aa0-9c21-636e7fa61ec4"
+            },
+            "vertices": [
+              {
+                "x": 2160,
+                "y": 460
+              },
+              {
+                "x": 2350,
+                "y": 460
               }
             ]
           },
@@ -1026,7 +1024,7 @@
                 {
                   "id": "b79fc36c-4a8f-44d3-b4fd-1674f3e6e5b8",
                   "title": "Elevación de privilegios",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Elevation of privilege",
                   "description": "Un atacante accede al servidor web e intenta escalar privilegios.",
@@ -1043,7 +1041,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 2,
-                "elevationOfPrivilege": 1
+                "elevationOfPrivilege": 4
               }
             }
           },
@@ -1061,8 +1059,8 @@
                 "text": "Frontend"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1159,7 +1157,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1168,7 +1166,7 @@
                 {
                   "id": "fc1e16be-4377-41ea-9336-ee85ae7b4b8b",
                   "title": "Ataque XSS",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "TBD",
                   "type": "Repudiation",
                   "description": "Un atacante inserta entradas maliciosas con el fin de realizar un ataque XSS el cual pueda ser persistente o no, así como modificar la página.",
@@ -1182,7 +1180,7 @@
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
-                "repudiation": 1,
+                "repudiation": 2,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -1319,6 +1317,19 @@
                   "new": false,
                   "number": 12,
                   "score": "8"
+                },
+                {
+                  "id": "1a21304a-c8df-4bc6-ba2d-4405e36c255b",
+                  "title": "Elevación de privilegios",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Un atacante accede al servidor web e intenta escalar privilegios.",
+                  "mitigation": "Configurar el servidor web con credenciales seguras, cerrar puertos no utilizados y asignarlos a direcciones IP especificas de donde serán consumidos, habilitar el firewall del sistema operativo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "5"
                 }
               ],
               "threatFrequency": {
@@ -1327,7 +1338,7 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 2,
-                "elevationOfPrivilege": 0
+                "elevationOfPrivilege": 3
               }
             }
           },
@@ -1443,7 +1454,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1452,7 +1463,7 @@
                 {
                   "id": "43662d1b-733f-4157-946a-7197d91641bf",
                   "title": "Inyección SQL",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Repudiation",
                   "description": "El usuario logra mandar una solicitud con datos maliciosos que son usados para realizar una Inyección SQL.",
@@ -1461,12 +1472,25 @@
                   "new": false,
                   "number": 13,
                   "score": "5"
+                },
+                {
+                  "id": "74984165-5b56-4530-ac0c-9d30cfad6653",
+                  "title": "Mal uso de endpoints",
+                  "status": "Mitigated",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Un usuario es capaz de utilizar funciones de administrador,  así como de usuario normal o viceversa.",
+                  "mitigation": "Implementar medidas de autenticación y autorización, mediante tokens JWT.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
-                "repudiation": 3,
+                "tampering": 2,
+                "repudiation": 4,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
@@ -1475,8 +1499,8 @@
           },
           {
             "position": {
-              "x": 2140,
-              "y": 720
+              "x": 2440,
+              "y": 520
             },
             "size": {
               "width": 120,
@@ -1588,7 +1612,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
@@ -1597,18 +1621,24 @@
               "threats": [
                 {
                   "id": "8b974b1f-63ea-42eb-81f4-717490639bfe",
-                  "title": "New STRIDE threat",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "title": "Usuario no autorizado ingresa a la base de datos",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Un usuario no autorizado logra ingresar a la base de datos, lo cual atenta contra el servidor de la base de datos.",
+                  "mitigation": "Evitar el uso de usuario Root\nUtilizar contraseñas seguras y realizar la instalación segura del servidor de base de datos",
                   "modelType": "STRIDE",
-                  "new": true,
+                  "new": false,
                   "number": 14,
-                  "score": ""
+                  "score": "5"
                 }
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             }
           }
         ],
