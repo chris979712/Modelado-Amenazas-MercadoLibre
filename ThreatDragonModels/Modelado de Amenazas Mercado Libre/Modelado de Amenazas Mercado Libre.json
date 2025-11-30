@@ -38,6 +38,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -121,7 +122,6 @@
               ]
             },
             "id": "b8a470f8-2677-4166-8715-ad7374f09a1d",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Usuario",
@@ -178,7 +178,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -194,20 +195,39 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "Request",
+              "description": "Solicitud al servidor web para obtener acceso al sitio web y sus funcionalidades.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "d905f38e-8f41-43a7-88c3-cebbb8eed22c",
+                  "title": "Solicitudes al servidor en formato HTTP",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Las solicitudes al servidor no se encuentran usadas ni usando un transporte de comunicación seguro como HTTPS, permitiendo que puedan ser interceptadas y manipuladas\n.",
+                  "mitigation": "Implementar el protocolo de comunicación HTTPS para manetener cifradas y seguras las solicitudes emitidas al servidor web.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Data Flow"
+              "Request"
             ],
             "id": "f359534d-7940-43c9-8a2a-0b554200380d",
             "source": {
@@ -233,7 +253,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -249,20 +270,39 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "Response",
+              "description": "Respuesta obtenida de la solicitud del servidor",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "66126225-808e-44cf-8be5-86b6e4973dce",
+                  "title": "Alteración en respuestas del servidor",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Un atacante Man In the middle intercepta las solicitudes de respuesta del servidor, modificando sus resultados e información obtenida.",
+                  "mitigation": "Cifrar los canales de comunicación e implementar el protocolo HTTPS en la conexión entre cliente y servidor.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
-              "Data Flow"
+              "Response"
             ],
             "id": "80fb1d86-2fcb-484b-95ca-1f3f3ed15f7f",
             "source": {
@@ -275,7 +315,7 @@
             },
             "vertices": [
               {
-                "x": 530,
+                "x": 570,
                 "y": 610
               },
               {
@@ -288,7 +328,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -304,20 +345,34 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "215ea7d9-128a-4dc5-9f36-b8049a9f16fd",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 4,
+                  "score": ""
+                }
+              ]
             },
             "labels": [
-              "Data Flow"
+              "Request"
             ],
             "id": "20b1c59b-3ea8-4c3d-81d1-efb76d1b43a4",
             "source": {
@@ -334,10 +389,24 @@
                 "y": 470
               },
               {
+                "x": 940,
+                "y": 450
+              },
+              {
                 "x": 1030,
                 "y": 470
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -778,13 +847,14 @@
                 "text": "Servidor web Apache"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -868,7 +938,6 @@
               ]
             },
             "id": "c62f7219-2abd-4926-ac74-59af48c0485d",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Servidor web Apache",
@@ -876,12 +945,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "136363cf-52d6-4f44-aeaa-fa36eeae59ab",
+                  "title": "Dengación de servicios",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Un atacante intenta realizar una denegación de servicios al servidor web que se encuentra como proxy inverso.",
+                  "mitigation": "Se aplica un balanceador de carga para poder rechazar aquellas peticiones en volumen.\nSe tiene en cuenta la posibilidad de contratar un host de servicios como CloudFlare, el cual se encargue de realizar balanceos de carga y prevenir este tipo de situaciones.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "4"
+                },
+                {
+                  "id": "b79fc36c-4a8f-44d3-b4fd-1674f3e6e5b8",
+                  "title": "Elevación de privilegios",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Un atacante accede al servidor web e intenta escalar privilegios.",
+                  "mitigation": "Configurar el servidor web con credenciales seguras, cerrar puertos no utilizados y asignarlos a direcciones IP especificas de donde serán consumidos, habilitar el firewall del sistema operativo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "5"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -905,6 +1009,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -988,7 +1093,6 @@
               ]
             },
             "id": "f1114fcb-f6e7-4872-9c3e-341cf0208a4c",
-            "zIndex": 12,
             "data": {
               "type": "tm.Process",
               "name": "Frontend",
@@ -1025,6 +1129,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1108,7 +1213,6 @@
               ]
             },
             "id": "28111cfa-6d55-4d44-bd3a-2b10451ba3f4",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Servidor web Apache",
@@ -1145,6 +1249,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1228,7 +1333,6 @@
               ]
             },
             "id": "0abfe583-355b-4bbc-bb9d-6b6bfb7077f3",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "Proceso de login",
@@ -1268,6 +1372,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1351,7 +1456,6 @@
               ]
             },
             "id": "bc3d6051-414d-4e16-a9ec-f593fd0ef637",
-            "zIndex": 15,
             "data": {
               "type": "tm.Store",
               "name": "Base de datos",
@@ -4098,6 +4202,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
