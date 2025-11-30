@@ -2654,17 +2654,7 @@
                 "x": 2380,
                 "y": 470
               }
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            }
+            ]
           },
           {
             "position": {
@@ -5114,6 +5104,6 @@
     ],
     "diagramTop": 9,
     "reviewer": "Guillermo Humberto Vera Amaro",
-    "threatTop": 22
+    "threatTop": 23
   }
 }
