@@ -2601,7 +2601,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "SQL Query request",
+              "name": "SQL Query Insert",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -2633,7 +2633,7 @@
               }
             },
             "labels": [
-              "SQL Query request"
+              "SQL Query Insert"
             ],
             "id": "4a6ede43-8f08-404f-bf62-8955aff4ae4d",
             "source": {
@@ -2650,10 +2650,28 @@
                 "y": 460
               },
               {
-                "x": 2350,
-                "y": 460
+                "x": 2260,
+                "y": 440
+              },
+              {
+                "x": 2280,
+                "y": 440
+              },
+              {
+                "x": 2380,
+                "y": 470
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "position": {
